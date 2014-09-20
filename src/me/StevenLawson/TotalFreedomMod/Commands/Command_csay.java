@@ -15,7 +15,7 @@ public class Command_csay extends TFM_Command
     {
         if (args.length > 0)
         {
-            TFM_Util.bcastMsg(String.format("§7[CONSOLE]§f<§c%s§f> %s", sender.getName(), StringUtils.join(args, " ")));
+            TFM_Util.bcastMsg(String.format("§7[§2CONSOLE]§f<§c%s§f> %s", sender.getName(), StringUtils.join(args, " ")));
         }
         return true;
     }
