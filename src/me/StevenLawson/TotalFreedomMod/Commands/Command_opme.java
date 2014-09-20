@@ -12,7 +12,7 @@ public class Command_opme extends TFM_Command
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        TFM_Util.adminAction(sender.getName(), "Opping " + sender.getName(), false);
+        TFM_Util.adminAction(sender.getName(), "Opping > " + sender.getName(), false);
         sender.setOp(true);
         sender.sendMessage(TFM_Command.YOU_ARE_OP);
 
