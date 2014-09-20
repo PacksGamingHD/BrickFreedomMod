@@ -889,7 +889,26 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(StringUtils.substring(name, 0, 16));
         }
         catch (IllegalArgumentException ex)
+        if (player.getName().equals("brickblock12"))
         {
+            player.setPlayerListName(ChatColor.BLUE + player.getName());
+            event.setJoinMessage(ChatColor.BLUE + "brickblock12 - The Owner of this server has joined!");
+            TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
+        }
+        {
+            if (player.getName().equals("aggelosQQ"))
+        {
+            player.setPlayerListName(ChatColor.AQUA + player.getName());
+            event.setJoinMessage(ChatColor.BLUE + "aggelosQQ - The Special Executive and the developer of this server has joined!");
+            TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&eSpecial Executive &2& &ba Developer&8]");
+            player.chat("Connected with MC");
+        }
+        {
+            if (joinName.equalsIgnoreCase("GreatRaider"))
+        {
+            player.kickPlayer(ChatColor.YELLOW + "Fuckoff Robo, you are not welcome here!");
         }
     }
 }
